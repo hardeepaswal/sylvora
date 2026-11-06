@@ -56,7 +56,7 @@
         <!-- Desktop Nav Links & CTA -->
         <div class="hidden md:flex items-center space-x-8">
           <nav class="flex items-center space-x-7 text-sm font-normal text-brand-ivory">
-            <a href="#what-we-do" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Services</a>
+            <a href="#services" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Services</a>
             <a href="#properties" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Properties</a>
             <a href="#why-sylvora" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Why Sylvora</a>
             <a href="#how-it-works" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">How It Works</a>
@@ -79,7 +79,7 @@
       <!-- Mobile Dropdown Menu -->
       <div id="mobile-menu" class="hidden md:hidden pt-4 pb-3 border-t border-brand-forestBorder/50 mt-4 space-y-3">
         <a href="#properties" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Properties</a>
-        <a href="#what-we-do" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Services</a>
+        <a href="#services" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Services</a>
         <a href="#why-sylvora" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Why Sylvora</a>
         <a href="#how-it-works" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">How It Works</a>
         <a href="#contact" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Contact</a>
@@ -136,7 +136,7 @@
 
 
   <!-- ==================== WHAT WE DO (Doc Table 1: Shading #f4f1ea) ==================== -->
-  <section id="what-we-do" class="bg-brand-ivory py-16 sm:py-24 border-b border-brand-stone">
+  <section id="services" class="bg-brand-ivory py-16 sm:py-24 border-b border-brand-stone">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
@@ -603,15 +603,29 @@
 
             <!-- Input 2: Phone or email -->
             <div>
-              <label for="client-contact" class="block text-xs font-semibold text-brand-slate uppercase tracking-wider mb-2">
-                Phone or email
+              <label for="client-phone" class="block text-xs font-semibold text-brand-slate uppercase tracking-wider mb-2">
+                Phone
               </label>
               <input 
                 type="text" 
-                id="client-contact" 
-                name="contact" 
+                id="client-phone" 
+                name="phone" 
                 required
-                placeholder="e.g. eleanor@example.com or +91 98765 43210" 
+                placeholder="e.g. +91 98765 43210" 
+                class="w-full px-4 py-3 bg-white border border-brand-sageMuted rounded-lg text-brand-forestDeep placeholder-brand-sageMuted text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-bronze focus:border-transparent transition-custom"
+              />
+            </div>
+
+            <div>
+              <label for="client-email" class="block text-xs font-semibold text-brand-slate uppercase tracking-wider mb-2">
+                Email
+              </label>
+              <input 
+                type="text" 
+                id="client-email" 
+                name="email" 
+                required
+                placeholder="e.g. eleanor@example.com" 
                 class="w-full px-4 py-3 bg-white border border-brand-sageMuted rounded-lg text-brand-forestDeep placeholder-brand-sageMuted text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-brand-bronze focus:border-transparent transition-custom"
               />
             </div>
