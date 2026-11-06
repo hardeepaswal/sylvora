@@ -1,4 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
+
+      // Show the floating Back to top link after the visitor passes halfway down.
+      const backToTop = document.getElementById('back-to-top');
+      if (backToTop) {
+        function updateBackToTopVisibility() {
+          const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+          backToTop.classList.toggle('hidden', maxScroll <= 0 || window.scrollY < maxScroll / 4);
+        }
+
+        window.addEventListener('scroll', updateBackToTopVisibility, { passive: true });
+        window.addEventListener('resize', updateBackToTopVisibility);
+        updateBackToTopVisibility();
+      }
       
       // 1. Mobile Menu Toggle
       const mobileToggle = document.getElementById('mobile-menu-toggle');
