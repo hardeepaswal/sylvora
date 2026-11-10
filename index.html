@@ -12,10 +12,15 @@
         extend: {
           colors: {
             brand: {
-              forest: '#14261b',
-              forestDeep: '#1b2a20',
-              forestCard: '#1f3a2a',
-              forestBorder: '#3a5a45',
+              // forest: '#14261b',
+              // forestDeep: '#1b2a20',
+              // forestCard: '#1f3a2a',
+              // forestBorder: '#3a5a45',
+              forest: '#080808',
+              forestDeep: '#111111',
+              forestCard: '#1b1b1b',
+              forestBorder: '#303030',
+              gray: '#303030',
               gold: '#c9a24b',
               bronze: '#7a5c1b',
               ivory: '#f4f1ea',
@@ -41,56 +46,55 @@
 </head>
 <body class="min-h-screen text-brand-forestDeep antialiased selection:bg-brand-gold selection:text-brand-forest">
 
-  <!-- ==================== HEADER & HERO (Doc Table 0: Shading #14261b) ==================== -->
-  <section id="home" class="bg-brand-forest text-brand-ivory relative overflow-hidden border-b border-brand-forestBorder/30">
-    <!-- Navigation Bar -->
-    <header class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-      <div class="flex items-center justify-between">
+  <header id="header" class="bg-brand-forest mx-auto px-4 sm:px-6 lg:px-8 py-5">
+    <div class="flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#home" class="flex items-baseline space-x-2.5 group focus:outline-none">
+        <span class="font-georgia text-2xl sm:text-3xl tracking-tight text-brand-gold font-normal">SYLVORA</span>
+        <span class="text-xs uppercase tracking-widest text-brand-ivory font-light opacity-90">ESTATES</span>
+      </a>
+
+      <!-- Desktop Nav Links & CTA -->
+      <div class="hidden md:flex items-center space-x-8">
+        <nav class="flex items-center space-x-7 text-sm font-normal text-brand-ivory">
+          <a href="#services" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Services</a>
+          <a href="#properties" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Properties</a>
+          <a href="#why-sylvora" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Why Sylvora</a>
+          <a href="#how-it-works" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">How It Works</a>
+        </nav>
         
-        <!-- Brand Logo -->
-        <a href="#home" class="flex items-baseline space-x-2.5 group focus:outline-none">
-          <span class="font-georgia text-2xl sm:text-3xl tracking-tight text-brand-gold font-normal">SYLVORA</span>
-          <span class="text-xs uppercase tracking-widest text-brand-ivory font-light opacity-90">ESTATES</span>
-        </a>
-
-        <!-- Desktop Nav Links & CTA -->
-        <div class="hidden md:flex items-center space-x-8">
-          <nav class="flex items-center space-x-7 text-sm font-normal text-brand-ivory">
-            <a href="#services" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Services</a>
-            <a href="#properties" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Properties</a>
-            <a href="#why-sylvora" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">Why Sylvora</a>
-            <a href="#how-it-works" class="hover:text-brand-gold transition-custom py-1 focus:outline-none focus:text-brand-gold">How It Works</a>
-          </nav>
-          
-          <button id="header-consult-btn" type="button" class="bg-brand-gold hover:bg-[#d8b056] text-brand-forest font-bold text-sm px-5 py-2.5 rounded-full transition-custom shadow-sm hover:shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 focus:ring-offset-brand-forest">
-            Book a consultation
-          </button>
-        </div>
-
-        <!-- Mobile Menu Hamburger -->
-        <button id="mobile-menu-toggle" type="button" aria-label="Toggle Navigation Menu" class="md:hidden text-brand-ivory hover:text-brand-gold focus:outline-none p-1.5 rounded-md">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-            <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-          </svg>
+        <button id="header-consult-btn" type="button" class="bg-brand-gold hover:bg-[#d8b056] text-brand-forest font-bold text-sm px-5 py-2.5 rounded-full transition-custom shadow-sm hover:shadow-md active:scale-95 focus:outline-none focus:ring-2 focus:ring-brand-gold focus:ring-offset-2 focus:ring-offset-brand-forest">
+          Book a consultation
         </button>
       </div>
 
-      <!-- Mobile Dropdown Menu -->
-      <div id="mobile-menu" class="hidden md:hidden pt-4 pb-3 border-t border-brand-forestBorder/50 mt-4 space-y-3">
-        <a href="#properties" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Properties</a>
-        <a href="#services" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Services</a>
-        <a href="#why-sylvora" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Why Sylvora</a>
-        <a href="#how-it-works" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">How It Works</a>
-        <a href="#contact" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Contact</a>
-        <div class="pt-2">
-          <button id="mobile-consult-btn" type="button" class="w-full bg-brand-gold text-brand-forest font-bold text-sm py-2.5 rounded-full text-center hover:bg-[#d8b056]">
-            Book a consultation
-          </button>
-        </div>
-      </div>
-    </header>
+      <!-- Mobile Menu Hamburger -->
+      <button id="mobile-menu-toggle" type="button" aria-label="Toggle Navigation Menu" class="md:hidden text-brand-ivory hover:text-brand-gold focus:outline-none p-1.5 rounded-md">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path id="hamburger-icon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          <path id="close-icon" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
 
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden pt-4 pb-3 border-t border-brand-forestBorder/50 mt-4 space-y-3">
+      <a href="#properties" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Properties</a>
+      <a href="#services" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Services</a>
+      <a href="#why-sylvora" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Why Sylvora</a>
+      <a href="#how-it-works" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">How It Works</a>
+      <a href="#contact" class="mobile-nav-link block text-brand-ivory hover:text-brand-gold py-1.5 text-base">Contact</a>
+      <div class="pt-2">
+        <button id="mobile-consult-btn" type="button" class="w-full bg-brand-gold text-brand-forest font-bold text-sm py-2.5 rounded-full text-center hover:bg-[#d8b056]">
+          Book a consultation
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- Navigation Bar -->
+  <!-- ==================== HEADER & HERO (Doc Table 0: Shading #14261b) ==================== -->
+  <section id="home" class="bg-brand-forest text-brand-ivory relative overflow-hidden border-b border-brand-forestBorder/30">
     <!-- Hero Content (Doc Table 0 Row 3) -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-20 lg:pt-14 lg:pb-28">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
@@ -745,7 +749,7 @@
 
         <!-- Quick Back to Top -->
         <div>
-          <a id="back-to-top" href="#home" class="hidden fixed bottom-6 right-6 z-40 text-xs text-brand-gold hover:text-brand-ivory transition-custom inline-flex items-center space-x-1 rounded-full bg-brand-forest px-4 py-3 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory">
+          <a id="back-to-top" href="#header" class="hidden fixed bottom-6 right-6 z-40 text-xs text-brand-gold hover:text-brand-ivory transition-custom inline-flex items-center space-x-1 rounded-full bg-brand-forest px-4 py-3 shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-ivory">
             <span>Back to top</span>
             <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
